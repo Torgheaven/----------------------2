@@ -11,14 +11,9 @@
 	
 	<?php
 		// набор переменных сценария
-		$album = "The Dark Side of The Moon";
-		$team = "Pink Floyd";
-		$data = "17 марта 1973";
-		$label = "Harvest, Capitol, EMI";
-		$format = "LP, кассета, CD, SACD";
-		$status = "Платиновый (USA), Платиновый(GBR)";
+		const a = (array("The Dark Side of The Moon", "Pink Floyd", "17 марта 1973", "Harvest, Capitol, EMI", "LP, кассета, CD, SACD", "Платиновый (USA), Платиновый(GBR)"));
+	
+	echo a[0];	
 	?>
-		
-
 </body>
 </html>

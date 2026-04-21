@@ -1,15 +1,17 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-	<meta charset="UTF-8">
-	<title>Программирование на языке PHP</title>
-</head>
-<body>
+<?php
+echo"<!DOCTYPE html>";
+echo'<html lang="ru">';
+echo"<head>";
+echo	'<meta charset="UTF-8">';
+echo	"<title>Программирование на языке PHP</title>";
+echo"</head>";
+echo"<body>";
 
-	<h1>Основы программирования</h1>
-	<h2>Типы данных</h2>
-	<hr>
-	<h2>Все будет правильно, на этом построен мир</h2>
+echo	"<h1>Основы программирования</h1>";
+echo	"<h2>Типы данных</h2>";
+echo	"<hr>";
+echo	"<h2>Все будет правильно, на этом построен мир</h2>";
+?>
 	
 	<?php 	
 		// инициализация констант хранения контента
@@ -55,6 +57,7 @@
 		echo "Год издания: ", RESOURSE[2];
 		echo "</pre>";			
 	?>
-	
-</body>
-</html>
+<?php	
+echo "</body>";
+echo "</html>";
+?>

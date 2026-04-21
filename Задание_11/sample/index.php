@@ -17,7 +17,10 @@
 		const CONSTSTR = 'Слабая типизация PHP';
 
 		define("ARRSTR", array('Слабая типизация PHP'));
-
+		
+		echo var_dump($VarStr);
+		echo var_dump(CONSTSTR);
+		echo var_dump(ARRSTR);
 	?>
 	
 
