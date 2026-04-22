@@ -1,0 +1,89 @@
+<?php
+$head = <<<head
+<head>
+	<meta charset="utf-8">
+	<title>Изучаем PHP</title>
+	<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+head;
+
+$header = <<<header
+	<header>
+		<div class="content ins">
+			<div class="logo">
+				<img src="../assets/logo.png" alt="logo">
+				<a href="/">
+					<h3>Музыкальный сервис</h3>
+				</a>
+			</div>
+			<nav>
+				<a href="/teams">Группы</a> |
+				<a href="/albums">Альбомы</a> |
+				<a href="/tracks">Треки</a> |
+				<a href="/admin">Консоль</a>
+			</nav>
+		</div>
+	</header>
+header;
+
+
+$content = <<<content
+		<h1>Группы</h1> <div class="card"> <img src="../assets/teams/acdc.jpg" class="teams_img"> <div class="card_text"> <h3>AC/DC</h3> <p>Страна: <b>Австралия</b></p> <p>Год основания: <b>1970</b></p> <p>Стиль группы: <b>Хард-блюз-рок</b></p> <span class="td_info">подробнее...</span> </div> </div> <div class="card"> <img src="../assets/teams/aerosmith.jpg" class="teams_img"> <div class="card_text"> <h3>Aerosmith</h3> <p>Страна: <b>США</b></p> <p>Год основания: <b>1970</b></p> <p>Стиль группы: <b>Хард-рок</b></p> <span class="td_info">подробнее...</span> </div> </div>
+content;
+
+$footer = <<<footer
+		<footer>
+		<div class="content">
+			<div class="block">
+				<div class="logo">
+					<img src="assets/logo.png" alt="logo">
+					<h2>Музыкальный сервис</h2>
+				</div>
+			</div>
+
+			<div class="block">
+				<div class="head">КОМПАНИЯ</div>
+				<div class="links">
+					<p><a href="/about">О нас</a></p>
+					<p><a href="/contacts">Контакты</a></p>
+				</div>
+			</div>
+			<div class="block">
+				<div class="head">ПОЛЕЗНЫЕ ССЫЛКИ</div>
+				<div class="links">
+					<p><a href="https://www.vehi.net/mbulgakov/master/01.html" target="_blank">Хорошая книга</a></p>
+					<p><a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%81%D1%82%D0%B5%D1%80_%D0%B8_%D0%9C%D0%B0%D1%80%D0%B3%D0%B0%D1%80%D0%B8%D1%82%D0%B0" target="_blank">Справка</a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+footer;	
+?>
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<?php echo $head; ?>
+</head>
+
+<body>
+	<hreader>
+		<div class="content">
+			<?php echo $header; ?>
+		</div>
+	</hreader>
+
+	<div class="main">
+		<div class="content">
+			<?php echo $content; ?>
+		</div>
+	</div>
+
+	<footer>
+		<div class="content">
+			<?php echo $footer; ?>
+		</div>
+	</footer>
+</body>
+</html>
