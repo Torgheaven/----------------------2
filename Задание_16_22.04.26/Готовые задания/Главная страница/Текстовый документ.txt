@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<?php echo $head; ?>
+</head>
+
+<body>
+	<hreader>
+		<div class="content">
+			<?php echo $header; ?>
+		</div>
+	</hreader>
+
+	<div class="main">
+		<div class="content">
+			<?php echo $content; ?>
+		</div>
+	</div>
+
+	<footer>
+		<div class="content">
+			<?php echo $footer; ?>
+		</div>
+	</footer>
+</body>
+</html>
