@@ -1,63 +1,33 @@
 <?php
 
-include '/teams.php';
-
-$head = <<<head
+include '/Teams.php';
+?>
 <head>
-    <meta charset="utf-8">
-    <title>Группы - Музыкальный сервис</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+	<div class="content ins">
+			<?php include "../inc/head.php"?>
+		</div>
 </head>
-head;
 
-$header = <<<header
-<header>
-    <div class="content">
-        <div class="logo">
-            <img src="../assets/logo.png" alt="logo">
-            <a href="/">
-                <h3>Музыкальный сервис</h3>
-            </a>
-        </div>
-        <nav>
-            <a href="/teams">Группы</a> |
-            <a href="/albums">Альбомы</a> |
-            <a href="/tracks">Треки</a> |
-            <a href="/admin">Консоль</a>
-        </nav>
-    </div>
-</header>
-header;
+<body>
+	<header>
+		<div class="content ins">
+			<?php include "../inc/header.php"?>
+		</div>
+	</header>
 
-$footer = <<<footer
-<footer>
-    <div class="content">
-        <div class="block">
-            <div class="logo">
-                <img src="../assets/logo.png" alt="logo">
-                <h2>Музыкальный сервис</h2>
-            </div>
-        </div>
+	<div class="main">
+		<div class="content ins">
+			<?php include "../inc/content.php"?>
+		</div>
+	</div>
 
-        <div class="block">
-            <div class="head">КОМПАНИЯ</div>
-            <div class="links">
-                <p><a href="/about">О нас</a></p>
-                <p><a href="/contacts">Контакты</a></p>
-            </div>
-        </div>
-        <div class="block">
-            <div class="head">ПОЛЕЗНЫЕ ССЫЛКИ</div>
-            <div class="links">
-                <p><a href="https://www.vehi.net/mbulgakov/master/01.html" target="_blank">Хорошая книга</a></p>
-                <p><a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%81%D1%82%D0%B5%D1%80_%D0%B8_%D0%9C%D0%B0%D1%80%D0%B3%D0%B0%D1%80%D0%B8%D1%82%D0%B0" target="_blank">Справка</a></p>
-            </div>
-        </div>
-    </div>
-</footer>
-footer;
-
-$content = $teamsArray;
+	<footer>
+		<div class="content ins">
+			<?php include "../inc/footer.php"?>
+		</div>
+	</footer>
+<?php
+$content = $TeamsArray;
 ?>
 
 <!DOCTYPE html>
@@ -66,16 +36,21 @@ $content = $teamsArray;
 <body>
     <?php echo $header; ?>
 
-    <div class="main">
-        <div class="content">
-            <?php 
-            echo '<h1>Группы</h1>';
-            echo '<pre>';
-            print_r($content);
-            echo '</pre>';
-            ?>
-        </div>
+    <h1>Группы</h1>
+<?php foreach ($TeamsArray as $team): ?>
+    <div class="card">
+        <h3><?php echo $team['id_team']; ?></h3>
+        <p>Название: <?php echo $team['name']; ?></p>
+        <p>Псевдоним: <?php echo $team['alies']; ?></p>
+        <p>Страна: <?php echo $team['country']; ?></p>
+        <p><?php echo $team['content']; ?></p>
+        <p>Год: <?php echo $team['date']; ?></p>
+        <p>Стиль: <?php echo $team['style']; ?></p>
+        <p><?php echo $team['path']; ?></p>
+        <p><?php echo $team['note']; ?></p>
     </div>
+    <hr>
+<?php endforeach; ?>
 
     <?php echo $footer; ?>
 </body>
