@@ -1,6 +1,6 @@
 <?php
 
-include '/teams.php';
+include '/Teams.php';
 
 $head = <<<head
 <head>
@@ -66,16 +66,21 @@ $content = $teamsArray;
 <body>
     <?php echo $header; ?>
 
-    <div class="main">
-        <div class="content">
-            <?php 
-            echo '<h1>Группы</h1>';
-            echo '<pre>';
-            print_r($content);
-            echo '</pre>';
-            ?>
-        </div>
+    <h1>Группы</h1>
+<?php foreach ($TeamsArray as $team): ?>
+    <div class="card">
+        <h3><?php echo $team['id_team']; ?></h3>
+        <p>Название: <?php echo $team['name']; ?></p>
+        <p>Псевдоним: <?php echo $team['alies']; ?></p>
+        <p>Страна: <?php echo $team['country']; ?></p>
+        <p><?php echo $team['content']; ?></p>
+        <p>Год: <?php echo $team['date']; ?></p>
+        <p>Стиль: <?php echo $team['style']; ?></p>
+        <p><?php echo $team['path']; ?></p>
+        <p><?php echo $team['note']; ?></p>
     </div>
+    <hr>
+<?php endforeach; ?>
 
     <?php echo $footer; ?>
 </body>

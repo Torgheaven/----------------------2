@@ -1,5 +1,5 @@
 <?php
-include '../data/tracks.php';
+include '../data/Tracks.php';
 
 $head = <<<head
 <head>
@@ -66,7 +66,7 @@ $content = $tracksArray;
     <?php echo $header; ?>
 
 <h1>Треки</h1>
-<?php foreach ($tracksArray as $track): ?>
+<?php foreach ($TracksArray as $track): ?>
     <div class="track">
         <p><strong>ID: <?php echo $track['id_track']; ?></strong> — <?php echo $track['name']; ?></p></strong> — <?php echo $track['note']; ?></p></strong> — <?php echo $track['id_album']; ?></p>
     </div>
