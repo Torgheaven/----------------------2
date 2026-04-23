@@ -65,16 +65,13 @@ $content = $tracksArray;
 <body>
     <?php echo $header; ?>
 
-    <div class="main">
-        <div class="content">
-            <?php 
-            echo '<h1>Треки</h1>';
-            echo '<pre>';
-            print_r($content);
-            echo '</pre>';
-            ?>
-        </div>
+<h1>Треки</h1>
+<?php foreach ($tracksArray as $track): ?>
+    <div class="track">
+        <p><strong>ID: <?php echo $track['id_track']; ?></strong> — <?php echo $track['name']; ?></p></strong> — <?php echo $track['note']; ?></p></strong> — <?php echo $track['id_album']; ?></p>
     </div>
+    <hr>
+<?php endforeach; ?>
 
     <?php echo $footer; ?>
 </body>
